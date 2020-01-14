@@ -1,0 +1,55 @@
+.vertical-center {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.vertical-center .container-fluid {
+  flex-grow:1
+}
+h1 {
+  margin: 24px 0;
+}
+.messages p {
+  margin: 6px 0;
+}
+
+ul.messages.list-group {
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+.typing {
+  font-style: italic;
+}
+.msg-delivered {
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  color: #2F99F5;
+}
+.msg-read {
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  color: #2AC151;
+}
+.ownmessage {
+	background-color: #9bc2db;
+	color: #fff;
+	font-style: italic;
+}
+.ownmessage p{
+	text-align: right;
+}
+
+.totheright {
+	padding-left :25%;
+	padding-bottom :7px;
+}
+
+.totheleft {
+	padding-right :25%;
+	padding-bottom :7px;
+}
+
+.well {
+	margin-top: 35px;
+}
