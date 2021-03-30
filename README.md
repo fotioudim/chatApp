@@ -1,4 +1,4 @@
-# chatApp
+# Chat app, a real time communication project using Node.js and socket.io
 Implementation of chating, combining the use of a main public chat room and many private rooms.
 
 ### Socket-signalling server
