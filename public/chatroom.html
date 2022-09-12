@@ -2,16 +2,16 @@
 <html lang="en">
 
 	<head>
+		<title>Chat App</title>
 		<meta charset="utf-8">
 		<meta content="IE=edge" http-equiv="X-UA-Compatible">
 		<meta content="width=device-width, initial-scale=1" name="viewport">
-		<title>Chat App</title>
 		<link href="/images/logo.png" rel="icon" type="image/png"/>
-
+		<link href="logo.ico" rel="shortcut icon"/>
+		<link href="/images/apple-icon.png" rel="apple-touch-icon-precomposed">
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-		<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<link href="/css/style.css" rel="stylesheet">
-
 	</head>
 	
 	<body>
@@ -19,15 +19,25 @@
 		<div class="container-fluid" id="room">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1 well text-center">
-					Your status: 
-					<select id="status">
-						<option value="Active">Active</option>
-						<option value="Busy">Busy</option>
-						<option value="Away">Away</option>
-					</select>
-					<br/><br/> <b>Active Users</b> <br/> <p id="activeUsers"> </p>
-					<br/> <b>Busy Users</b> <br/> <p id="busyUsers"> </p>
-					<br/> <b>Away Users</b> <br/> <p id="awayUsers"> </p>
+					<a class="btn btn-danger " style="float: right;" href="/index.html">
+						<em class="fa-regular fa-circle-xmark"></em>
+						Exit
+					</a>
+					<h1 id="userName"></h1>
+					<h3>Your status: 
+						<select id="status">
+							<option value="Active">Active</option>
+							<option value="Busy">Busy</option>
+							<option value="Away">Away</option>
+						</select>
+					</h3>
+					<br>
+					<strong>Active Users</strong> 
+					<p id="activeUsers"></p>
+					<strong>Busy Users</strong> 
+					<p id="busyUsers"></p>
+					<strong>Away Users</strong> 
+					<p id="awayUsers"></p>
 				</div>
 			</div>
 		</div>
@@ -35,9 +45,10 @@
 		<div class="container-fluid" style="display: none;" id="pm">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 well">
-					<a class="btn btn-danger " style="float: right;" href="/index.html">
-						<i class="fas fa-times"></i>
-					Exit</a>
+					<a class="btn btn-warning " id="returnButton" style="float: right;" href="/chatroom.html">
+						<em class="fa-solid fa-arrow-rotate-left"></em>
+						Return
+					</a>
 					<h1 id="room-title" class="room-title text-center"></h1>
 					
 					<ul class="messages list-group">
@@ -47,11 +58,11 @@
 					<form id="messageForm">
 					
 						<div class="form-group">
-							<i class="" id="icon-type"></i>
+							<em class="" id="icon-type"></em>
 							<p class="help-block typing"></p>
 							<div class="input-group">
 								<span class="input-group-addon">
-								  <i class="glyphicon glyphicon-comment"></i>
+								  <em class="glyphicon glyphicon-comment"></em>
 								</span>
 								<input autofocus class="form-control" id="messagebox" name="message" type="text" value=""/>
 							</div>
